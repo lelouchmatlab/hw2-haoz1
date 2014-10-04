@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** 
- * Updated by JCasGen Wed Sep 11 13:44:28 EDT 2013
+ * Updated by JCasGen Fri Oct 03 23:10:15 EDT 2014
  * @generated */
 public class Annotation_Type extends org.apache.uima.jcas.tcas.Annotation_Type {
   /** @generated */
@@ -78,6 +78,54 @@ public class Annotation_Type extends org.apache.uima.jcas.tcas.Annotation_Type {
     ll_cas.ll_setDoubleValue(addr, casFeatCode_confidence, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_SentenceID;
+  /** @generated */
+  final int     casFeatCode_SentenceID;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getSentenceID(int addr) {
+        if (featOkTst && casFeat_SentenceID == null)
+      jcas.throwFeatMissing("SentenceID", "edu.cmu.deiis.types.Annotation");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_SentenceID);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setSentenceID(int addr, String v) {
+        if (featOkTst && casFeat_SentenceID == null)
+      jcas.throwFeatMissing("SentenceID", "edu.cmu.deiis.types.Annotation");
+    ll_cas.ll_setStringValue(addr, casFeatCode_SentenceID, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_NameEntity;
+  /** @generated */
+  final int     casFeatCode_NameEntity;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getNameEntity(int addr) {
+        if (featOkTst && casFeat_NameEntity == null)
+      jcas.throwFeatMissing("NameEntity", "edu.cmu.deiis.types.Annotation");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_NameEntity);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setNameEntity(int addr, String v) {
+        if (featOkTst && casFeat_NameEntity == null)
+      jcas.throwFeatMissing("NameEntity", "edu.cmu.deiis.types.Annotation");
+    ll_cas.ll_setStringValue(addr, casFeatCode_NameEntity, v);}
+    
+  
 
 
 
@@ -94,6 +142,14 @@ public class Annotation_Type extends org.apache.uima.jcas.tcas.Annotation_Type {
  
     casFeat_confidence = jcas.getRequiredFeatureDE(casType, "confidence", "uima.cas.Double", featOkTst);
     casFeatCode_confidence  = (null == casFeat_confidence) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_confidence).getCode();
+
+ 
+    casFeat_SentenceID = jcas.getRequiredFeatureDE(casType, "SentenceID", "uima.cas.String", featOkTst);
+    casFeatCode_SentenceID  = (null == casFeat_SentenceID) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_SentenceID).getCode();
+
+ 
+    casFeat_NameEntity = jcas.getRequiredFeatureDE(casType, "NameEntity", "uima.cas.String", featOkTst);
+    casFeatCode_NameEntity  = (null == casFeat_NameEntity) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_NameEntity).getCode();
 
   }
 }

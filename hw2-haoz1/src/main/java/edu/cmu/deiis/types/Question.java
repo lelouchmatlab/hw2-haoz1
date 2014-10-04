@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Wed Sep 11 13:44:28 EDT 2013
- * XML source: /home/diwang/ur-workspace/deiis-f13-homework/src/main/resources/desc/deiis_types.xml
+ * Updated by JCasGen Fri Oct 03 23:10:16 EDT 2014
+ * XML source: /home/haoz1/mygit/hw2-haoz1/hw2-haoz1/src/main/resources/descriptors/casConsumerDescriptor.xml
  * @generated */
 public class Question extends Annotation {
   /** @generated
@@ -53,10 +53,13 @@ public class Question extends Annotation {
     readObject();
   }   
 
-  /** <!-- begin-user-doc -->
+  /** 
+   * <!-- begin-user-doc -->
     * Write your own initialization here
     * <!-- end-user-doc -->
-  @generated modifiable */
+  *
+   * @generated modifiable 
+   */
   private void readObject() {/*default - does nothing empty block */}
      
 }
