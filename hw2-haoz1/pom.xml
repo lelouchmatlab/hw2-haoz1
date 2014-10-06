@@ -79,6 +79,16 @@
 			<artifactId>lingpipe</artifactId>
 			<version>4.1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>3.4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-ner</artifactId>
+			<version>pre-maven</version>
+		</dependency>
 	</dependencies>
 	<scm>
 		<connection>scm:git:git@github.com:lelouchmatlab/hw2-haoz1.git</connection>

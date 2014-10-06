@@ -20,7 +20,7 @@
       <nameValuePair>
         <name>Param_OutputFile</name>
         <value>
-          <string>src/main/resources/data/hw2-output-haoz1.out</string>
+          <string>src/main/resources/data/hw2-haoz1.out</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

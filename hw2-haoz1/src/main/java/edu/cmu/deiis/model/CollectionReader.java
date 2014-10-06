@@ -1,6 +1,6 @@
 /**
- * CollectionReader is responsible for converting input file to CAS for analysis engine to process. In it's initialization 
- * method it open the input file stream. Then int getNext function, it simply reads in a line, set it content to CAS text, return that CAS instanse.  
+ * CollectionReader is responsible for converting input file to CAS for aggregated analysis engine to process. In it's initialization 
+ * method it open the input file stream. In the  getNext function, it simply reads in a line, set it content to CAS text, return that CAS instanse.  
  *
  *@author Hao Zhang
  */

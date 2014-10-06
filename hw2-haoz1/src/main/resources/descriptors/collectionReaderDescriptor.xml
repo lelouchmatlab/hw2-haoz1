@@ -20,7 +20,7 @@
       <nameValuePair>
         <name>Param_InputFile</name>
         <value>
-          <string>src/main/resources/data/sample.in</string>
+          <string>src/main/resources/data/hw2.in</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

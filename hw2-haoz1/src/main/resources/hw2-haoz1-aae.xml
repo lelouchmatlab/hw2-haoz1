@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="CrfAE">
+      <import location="/home/haoz1/mygit/hw2-haoz1/hw2-haoz1/src/main/resources/descriptors/CrfAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="HmmAE">
+      <import location="/home/haoz1/mygit/hw2-haoz1/hw2-haoz1/src/main/resources/descriptors/HmmAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="DictionaryAE">
+      <import location="/home/haoz1/mygit/hw2-haoz1/hw2-haoz1/src/main/resources/descriptors/DictionaryAE.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>hw2-haoz1-aae</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>HmmAE</node>
+        <node>DictionaryAE</node>
+        <node>CrfAE</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>
