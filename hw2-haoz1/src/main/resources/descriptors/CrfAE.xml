@@ -20,13 +20,13 @@
       <nameValuePair>
         <name>Param_ModelFile</name>
         <value>
-          <string>src/main/resources/MYOWN.ser.gz</string>
+          <string>MYOWN.ser</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
-        <import location="/home/haoz1/mygit/hw2-haoz1/hw2-haoz1/src/main/resources/descriptors/deiis_types.xml"/>
+        <import location="deiis_types.xml"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>

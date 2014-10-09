@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Mon Oct 06 14:54:07 EDT 2014
+ * Updated by JCasGen Thu Oct 09 18:53:41 EDT 2014
  * XML source: /home/haoz1/mygit/hw2-haoz1/hw2-haoz1/src/main/resources/hw2-haoz1-aae.xml
  * @generated */
 public class Annotation extends org.apache.uima.jcas.tcas.Annotation {

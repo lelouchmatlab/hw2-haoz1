@@ -3,6 +3,7 @@ package edu.cmu.deiis.model;
 import java.util.List;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.apache.uima.UIMARuntimeException;
 import org.apache.uima.UimaContext;
@@ -31,7 +32,8 @@ public class CrfAE extends JCasAnnotator_ImplBase {
 		
 		String model_file = (String) aContext.getConfigParameterValue("Param_ModelFile");
 		try {
-			classifier = CRFClassifier.getClassifier(model_file);
+			InputStream is =  CrfAE.class.getClassLoader().getResourceAsStream(model_file);
+			classifier = (AbstractSequenceClassifier<CoreLabel>) CRFClassifier.getClassifier(is);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 		   throw new UIMARuntimeException(e);

@@ -13,6 +13,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 import org.apache.uima.UIMARuntimeException;
 import org.apache.uima.UimaContext;
@@ -46,8 +48,8 @@ public class DictionaryAE extends JCasAnnotator_ImplBase{
 		BufferedReader model_in ;
 		dictionary = new MapDictionary<String>();
 		try {
-			FileReader file = new FileReader(new File(model_file));
-			model_in = new BufferedReader(file);
+			InputStream is = DictionaryAE.class.getClassLoader().getResourceAsStream(model_file);
+			model_in = new BufferedReader(new InputStreamReader(is, "utf-8"));
 			while(model_in.ready()){
 				String name_entity_word = model_in.readLine();
 				dictionary.addEntry(new DictionaryEntry<String>(name_entity_word,"NE",CHUNK_SCORE));
@@ -55,7 +57,6 @@ public class DictionaryAE extends JCasAnnotator_ImplBase{
 			dictionaryChunkerTT = new ExactDictionaryChunker(dictionary,
                                          IndoEuropeanTokenizerFactory.INSTANCE,
                                          true,true);
-			
 		} catch (Exception e) {
 			throw new UIMARuntimeException(e);
 		} 

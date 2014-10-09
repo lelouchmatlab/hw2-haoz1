@@ -102,11 +102,6 @@ public class CollectionConsumer extends CasConsumer_ImplBase {
 		    		Crfmap.put(key.toString(), NER);
 		    	}
 		    }
-		    /*
-		    Hmmcounter = Hmmcounter + Hmmmap.size();
-		    Dictcounter = Dictcounter + Dictmap.size();
-		    Crfcounter = Crfcounter + Crfmap.size();
-	        */
 		    int Dict_noin_Hmm = 0;
 		    
 		    for(String dict_key : Dictmap.keySet()){

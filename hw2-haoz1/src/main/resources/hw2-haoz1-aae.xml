@@ -4,14 +4,14 @@
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
-    <delegateAnalysisEngine key="CrfAE">
-      <import location="/home/haoz1/mygit/hw2-haoz1/hw2-haoz1/src/main/resources/descriptors/CrfAE.xml"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="HmmAE">
-      <import location="/home/haoz1/mygit/hw2-haoz1/hw2-haoz1/src/main/resources/descriptors/HmmAE.xml"/>
+      <import location="descriptors/HmmAE.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="DictionaryAE">
-      <import location="/home/haoz1/mygit/hw2-haoz1/hw2-haoz1/src/main/resources/descriptors/DictionaryAE.xml"/>
+      <import location="descriptors/DictionaryAE.xml"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="CrfAE">
+      <import location="descriptors/CrfAE.xml"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
@@ -19,13 +19,13 @@
     <description/>
     <version>1.0</version>
     <vendor/>
-    <configurationParameters/>
+    <configurationParameters searchStrategy="language_fallback"/>
     <configurationParameterSettings/>
     <flowConstraints>
       <fixedFlow>
         <node>HmmAE</node>
         <node>DictionaryAE</node>
-        <node>CrfAE</node>
+      <node>CrfAE</node>
       </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>
